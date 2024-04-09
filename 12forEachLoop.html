@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<!-- 
+  ------forEach Loop in JavaScrip------
+  For Each (Mathod) is used to get data from js array or object.
+  This Method Calls a function once for each element in an array, In ordrre.
+  -------Syntax-------
+  var cars = ["car1","car2","car3","car4","car5"];
+  cars.foreach(MyFunction); // userdefined
+  function MyFunction(item, index, array){
+	 // body of function
+  }
+ -->
+</body>
+<script type="text/javascript">
+	var bikes = ["CD70","CD100","GS150cc","GS110cc","Yamaha250cc"];
+	bikes.forEach(call);
+	function call(item,index,array) {
+		// document.write(index+"&nbsp;"+"=>"+"&nbsp;"+item+"&nbsp;")
+		array[index]= item+"new";
+	}
+	bikes.forEach(phone);
+	function phone(item,index,array) {
+		document.write(index+"&nbsp;"+"=>"+"&nbsp;"+item+"&nbsp;")
+	}
+</script>
+</html>

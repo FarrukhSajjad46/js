@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<h1 id="res"></h1>
+    <div>
+    	<button onclick="pop()">POP</button>
+    	<button onclick="push()">PUSH</button>
+    	<button onclick="reverse()">REVERSE</button>
+    	<button onclick="shift()">SHIFT</button>
+    	<button onclick="slice()">SLICE</button>
+    </div>
+</head>
+<body>
+   <!-- 
+   	---------Methods Of Array--------
+   	pop(); // Removes an element at the end of the array.
+   	push(); // Adds an element at the end of the array.
+   	reverse(); Sort elements in accending orders of an array.
+   	shift(); Adds element at the first of an array.
+   	slice(); Pulls a copy of a portion of an array into a new array.
+    -->
+</body>
+<script type="text/javascript">
+	var bikes= ["cd70","cd100","honda125","suzuki110","suzuki150"];
+		var demo = bikes;
+	document.getElementById('res').innerText=demo;
+	function pop() {
+		demo.pop();
+	document.getElementById('res').innerText=demo;
+	}
+	function push() {
+		var x = prompt("Please enter your value","")
+		demo.push(x);
+		// demo.push("yamaha125");
+	document.getElementById('res').innerText=demo;
+    }
+    function slice() {
+    	var x = demo.slice(1,3);
+    document.getElementById('res').innerText=x;
+    }
+    function reverse() {
+    	demo.reverse();
+    document.getElementById('res').innerText=demo;
+    }
+    function shift() {
+    	var x = demo.shift();
+    document.getElementById('res').innerText=x;
+    }
+</script>
+</html>

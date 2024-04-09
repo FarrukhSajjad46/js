@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<!-- 
+		-----------setInterval() Method in JS-----------
+		The setInterval() method is used to repeat a function at every given time interval.
+		                 ---Syntax---
+		window.setInterval(function, milliseconds);
+		Function: first parameter is function to be executed.
+		Milliseconds: Indicates the length of time-interval between each execution.
+	 -->
+	 <button onclick="interval()">setInterval</button>
+	 <!-- 
+	 	----------setTimeout() Method in Js----------
+	 	The setTimeout() method execute a function after waiting a specified numbers of milliseconds.
+	 	                ---Syntax---
+	 	window.setTimeout(function, milliseconds);
+	 	Function: first parameter is function to be executed.
+	 	Milliseconds: Indicates the number of millisecods before execution takes place.
+	 	Exp----1s = 1000ms.
+	  -->
+	  <button onclick="setwet()">setTimeout</button>
+</body>
+<script type="text/javascript">
+	function interval() {
+		setInterval(
+			function() {
+				alert("Error Go Back");
+			},
+			2000
+			)
+	}
+	function setwet() {
+		setTimeout(
+			function() {
+				alert("Wellcome");
+			},
+			4000
+			)
+	}
+</script>
+</html>

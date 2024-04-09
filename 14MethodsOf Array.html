@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	     <br />
+         <br />
+         <br />
+         <h1 id="res"></h1>
+         <br />
+         <br />
+         <br />
+         <div>
+         	<button onclick="call1()">ValueOf</button>
+         	<button onclick="call101()">IndexOf</button>
+         	<button onclick="call110()">Concat</button>
+         	<button onclick="call011()">IsArray</button>
+         	<button onclick="call11()">Join</button>
+         </div>
+         <br />
+         <br />
+         <hr />
+         <br />
+         <br />
+         <h1 id="sult"></h1>
+         <br />
+         <br />
+         <br />
+         <div>
+         	<button onclick="call111()">Pop</button>
+         	<button onclick="call001()">Push</button>
+         	<button onclick="call010()">Reverse</button>
+         	<button onclick="call1010()">Shift</button>
+         	<button onclick="call0001()">Slice</button>
+         </div>
+</body>
+<script type="text/javascript">
+	var products = ["Cooler","Iron","Laptop","Tv","Computer","Radio"];
+	var alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','w','x','y','z'];
+	// var x = products;
+
+	function call1() {
+		var x = products.valueOf();
+	document.getElementById('res').innerText=x+"  valueOf(); // To print the all data of array.";
+	}
+	function call101() {
+		var x = prompt("Please write a small alphabit..!","to find index number in alphabit series.");
+		var cross= alpha.indexOf(x);
+		document.getElementById('res').innerText=cross+"  indexOf(); // Returns premitive value of the specified object.";
+	}
+	function call110() {
+		var x = products.concat(alpha);
+		document.getElementById('res').innerText=x+"  concat(); // Join several arrays into single array.";
+	}
+	function call011() {
+		var x = Array.isArray(products);
+		document.getElementById('res').innerText=x+"  isArray(); // Cheak if the variable is an array or not."
+	}
+	function call11() {
+		var u = products.concat(alpha);
+		var x= u.join('-')
+		document.getElementById('res').innerText=x+"  join();    // Combines elements of an array into a single string and return string."
+	}
+	//---------------Part 2 Methods of Array-----------//
+	var alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','w','x','y','z'];
+	var vidwa = alpha;
+	document.getElementById('sult').innerText=vidwa;
+	function call111() {
+		vidwa.pop();
+		document.getElementById('sult').innerText=vidwa+"    <==pop()==> Removes an element at the end of the array.";
+	}
+	function call001() {
+		var me = prompt("Please add a value in array...","");
+		vidwa.push(me);
+		document.getElementById('sult').innerText=vidwa+"    <==push()==> Adds an element at the end of the array.";
+	}
+	function call010() {
+		vidwa.reverse();
+		document.getElementById('sult').innerText=vidwa+"   <==reverse()==> Sort elements in accending orders of an array.";
+	}
+	function call1010() {
+		vidwa.shift();
+		document.getElementById('sult').innerText=vidwa+"    <==shift()==> Removes element at the first of an array.";
+	}
+	function call0001() {
+		var me = prompt("Please enter a number...","");
+		var kl = vidwa.slice(me)
+		document.getElementById('sult').innerText=kl +"  <==slice()==> Pulls a copy of a portion of an array into a new array.";
+	}
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		// When this is Alone
+		// var x = this;
+		// document.write('<h1>'+x)
+		// When this is with Object
+		var person = {
+			firstName : "F.Rukh",
+			lastName : "Sajjad",
+			fullName : function() {
+				return this.firstName + this.lastName;
+			}
+		};
+			document.write('<h1>'+ person.fullName());
+			function remove(elem) {
+				elem.style.display='none';
+			}
+	</script>
+</head>
+<body>
+	<button onclick="this.style.display = 'none'">
+		Click me to hide
+	</button>
+	<button onclick="this.style.background= 'pink'"> Change my color</button>
+	<!-- Using this within function -->
+	<button onclick="remove(this)">Remove Me</button>
+</body>
+ <script type="text/javascript">
+ 	  // var person = {
+ 	  // 	   firstName : 'Farrukh',
+ 	  // 	   secondName : 'Sajjad',
+ 	  // 	   fullName : function () {
+ 	  // 	   	return this.firstName+this.secondName;
+ 	  // 	   }
+ 	  // }
+ 	  // document.write("<h1>"+person.fullName());
+ </script>
+</html>

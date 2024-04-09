@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#main{
+			font-size: 50px;
+			color: red;
+			text-align: center;
+			margin: 200px auto;
+			font-family: monospace;
+			cursor: default;
+			transition: 2s;
+			box-shadow:10px 10px 10px 5px gray;
+		}
+	</style>
+</head>
+<body>
+	<div id="main" onmouseenter="modify()" onmouseleave="unmodify()">
+	Hy! Farrukh Sajjad.
+    </div>
+</body>
+<script type="text/javascript">
+	function modify() {
+	document.getElementById('main').style.fontSize= "90px";
+	document.getElementById('main').style.color= "lightblue";
+	document.getElementById('main').style.boxShadow= "-10px -10px 10px 5px gray";
+	}
+	function unmodify() {
+	document.getElementById('main').style.fontSize= "50px";
+	document.getElementById('main').style.color= "red";	
+	document.getElementById('main').style.boxShadow= "10px 10px 10px 5px gray";
+	}
+</script>
+</html>

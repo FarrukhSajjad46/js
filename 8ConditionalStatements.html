@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h1><textarea id="ans" readonly></textarea></h1>
+<input type="number" name="" id="value" min="0" max="75" >
+<button onclick="call()">Ok</button>
+</body>
+<script type="text/javascript">
+	// if (condition) {
+	// blocks of code to be executed
+	// if coditon is true
+//}
+	function call() {
+	var age = document.getElementById('value').value;
+
+	if (age >= 18) {
+		var jawab= "Yes you can vote.";
+		document.getElementById('ans').value=jawab;
+	} else if (age == 17) {
+		var jawab= "Wait one year more";
+		document.getElementById('ans').value=jawab;
+	} else {
+		var jawab= "Ap Vote k Liye Eligible ni hain.";
+		document.getElementById('ans').value=jawab;
+	 }
+	}
+	//if (condition1){
+
+//}else{
+	//block of codes to be executed
+	//if condition1 is false
+//}
+	// var age = 16;
+	// if (age >= 18) {
+	// 	document.write('<h1>Yes you can vote.</h1>');
+	// }else{
+	// 	document.write('<h1>No you can not vote.</h1>')
+	// }
+	//if (condition1){
+	//bolock of code will be executed
+	// if condition1 is true
+//}else if(condition2){
+	//block of code executed
+	// if condition1 is false
+//}else{
+	// code will be executed
+	// if condition1 and 2 is falls
+//}
+	// var age= 18;
+	// if (age >= 18) {
+	// 	document.write('<h1>Yes you can vote.</h1>');
+	// }else if (age == 17) {
+	// 	document.write('<h1>Wait one year more.</h1>')
+	// }else{
+	// 	document.write('<h1>Ni ap vote kerny k qabil ni hain.</h1>')
+	// }
+</script>
+</html>

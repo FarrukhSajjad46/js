@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<div>
+    <div>
+    	<input type="text" name="text" id="name" />
+    	<button onclick="greet()">Greet</button>
+    </div>
+    <div class="res" style="width: 100px; height: 100px; background: rgba(255, 0, 0, 0.6); font-size: 2rem; color: white; padding: 100px 100px; margin: 100px auto;"> </div>
+    </div>
+</body>
+<script type="text/javascript">
+	// Functions: are group of code or programs ; code reuseability and clean code.
+	// Types of Function: Pre-Defined Function> defined at time of making any language | User-Defined Function> defined by users according to their needs.
+	// Syntax of Functions
+	// function <FunctionName>(){ body of the function}
+	// function <FunctionName>(multiple input with commas)
+	// Calling User Defined function
+	function greet() {
+		var name = document.getElementById('name').value;
+		var string = "Hello " + name ;
+		document.getElementsByClassName('res')[0].innerHTML= string;
+	}
+</script>
+</html>

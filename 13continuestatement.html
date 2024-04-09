@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	// ----Continue Statement------
+	// Continue statement is used to skip the current iteration and go to a next itration.
+	// It is also a keyword.
+	// ---Syntax---
+	// continuecount
+	// for (count= 0 ; count <= 10 ; count++) {
+		// this is for odd numbers when count starts dividing by 2 then remaining equal to zero will be not print.
+		// if (count%2 == 0) {
+		// 	continue;
+		// }
+		// != not equals to zero shows that print those which remains will divides completely.
+	// 	if (count%2 != 0) {
+	// 		continue;
+	// 	}
+
+	// 	document.write(count+"&nbsp"+"<br />")
+	// }
+	//--------Switch Statement---------
+	// Switch statment is used to choose in between many cases.
+	// it work same as nested if-elseif-else statement.
+	// -----Syntax----
+	// switch(variable name) {
+	// case 1:
+	// documnent.write("i is equal to 0ne");
+	// break;
+	// case 2:
+	// document.write(i is equals to 2);
+	// break;
+	// case 3:
+	// document.write("i is equals to 3");
+	// break;
+	// case 4:
+	// document.write("i is equals to 3")
+	// break;
+	// default:
+	// document.write("i is equals to 3")
+	// break;
+    // }
+	document.write("<hr />"+"<center><h1>continue Statement</h1></center>"+"<br/>");
+	//----------Continue Statement-----------
+	for (j = 0; j <= 10; j++) {
+		if (j == 5) {
+			continue;
+		}
+		document.write(j+"<br/>")
+	}
+	document.write("<hr />"+"<center><h1>break Statement</h1></center>"+"<br/>");
+	//-----------Break Statement-------------
+	for (i = 10; i > 0; i--) {
+		if (i == 6) {
+			break;
+		}
+		document.write(i+"<br/>");
+	}
+	document.write("<hr />"+"<center><h1>switch Statement</h1></center>"+"<br/>");
+	//---------Switch Statement------------
+    var i = 7;
+	switch(i) {
+	case 1:
+		document.write("i is equals to 1");
+		break;
+	case 2:
+		document.write("i is equals to 2");
+		break;
+	case 3:
+		document.write("i is equals to 3");
+		break;
+	case 4:
+		document.write("i is equals to 4");
+		break;
+	case 5:
+		document.write("i is equals to 5");
+		break;
+	case 6:
+		document.write("i is equals to 6");
+		break;
+	case 7:
+		document.write("i is equals to 7");
+		break;
+	case 8:
+		document.write("i is equals to 8");
+		break;
+	case 9:
+		document.write("i is equals to 9");
+		break;
+	case 0:
+		document.write("i is equals to 0")
+		break;
+	default:
+		document.write("i is greater than 10");
+	}
+</script>
+</html>

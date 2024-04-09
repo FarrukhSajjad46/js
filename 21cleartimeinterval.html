@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="stopcount()">StopCount</button>
+    <hr />
+	<h1></h1>
+</body>
+<script type="text/javascript">
+	var my;
+	function start() {
+		my = setTimeout (
+			function() {
+				var mm = document.write(" Wellcome to Our WebPage ");
+				document.getElementsByTagName('h1')[0].innerText= mm;
+			},
+			2000
+			);
+	};
+
+	function stop() {
+		clearTimeout(my);
+		alert("Stoped");
+	}
+
+
+	var ny = setInterval(count,1000);
+	var c = 0;
+	function count() {
+		document.getElementsByTagName('h1')[0].innerText=c;
+		c++;
+		}
+		function stopcount() {
+			clearInterval(ny);
+			alert('pressed')
+		}
+</script>
+</html>

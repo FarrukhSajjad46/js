@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+        <input type="" name="numvalue" placeholder="Operation...">
+        <select id="ope">
+        	<optgroup label="select">
+        	<option>round</option>
+        	<option>pow</option>
+        	<option>sqrt</option>
+        	<option>abs</option>
+        	<option>ceil</option>
+        	<option>floor</option>
+        	<option>min</option>
+        	<option>max</option>
+        	<option>random</option>
+        	</optgroup>
+        </select>
+        <input type="number" name="" id="res" placeholder="Result..." >
+        <br />
+        <br />
+        <button onclick="math()">Cheak</button>
+        <h1 style="border:2px solid gray; width: 500px;height: 300px;margin: 100px auto;"></h1>
+</body>
+<script type="text/javascript">
+	function math() {
+		var v = document.getElementsByName('numvalue')[0].value;
+		var s = document.getElementById('ope').value;
+		// alert(s);
+		// ---------------
+		if (s == 'round') {
+		var res = Math.round(v);
+		document.getElementsByTagName('h1')[0].innerText="Math.round(x): Return the rounded value of x to its nearest integer.";
+		// alert(res);
+		}
+		// -------------
+		if (s == 'pow') {
+			input = v.split(',');
+			if (input.length != 2) {
+				alert("Please provide two values separated by comma.");
+				return;
+			}
+			var x = parseFloat(input[0]);
+			var y = parseFloat(input[1]);
+			if (isNaN(x) || isNaN(y)) {
+				alert("Please provide  valid numeric values.");
+				return;
+			}
+			var res = Math.pow(x, y);
+			document.getElementsByTagName('h1')[0].innerText="Math.pow(x , y): Return the value of x to the power y."
+			// alert(res)
+		}
+		// ------------
+		if (s == 'sqrt') {
+			var res = Math.sqrt(v);
+			document.getElementsByTagName('h1')[0].innerText="Math.sqrt(x): Return the sqrt root of x.";
+		}
+		// ------------
+		if (s == "abs") {
+			if (v >= 0) {
+				alert("Please enter a negative value to get correct answer.")
+				return;
+			}
+			var res = Math.abs(v);
+			document.getElementsByTagName('h1')[0].innerText="Math.abs(-x): Return the positive value of x.";
+		}
+		// -------------
+		if (s == 'ceil') {
+        if (v % 1 === 0) {
+        alert("Please provide a non-integer decimal number to perform the operation.");
+          } else {
+        var res = Math.ceil(v);
+        document.getElementsByTagName('h1')[0].innerText="Math.ceil(x): Return the value of x rounded up to its nearest integer."
+          }
+        }
+        // ------------
+        if (s == "floor") {
+        	if (v % 1 === 0) {
+        		alert("Please provide a non-integer decimal number to perform the operation");
+        	} else {
+        		var res = Math.floor(v);
+        		document.getElementsByTagName('h1')[0].innerText="Math.floor(): Returns the value of x rounded down to its nearest integer."
+        	}
+        }
+        // -------------
+        if (s == "min") {
+        	input = v.split(',');
+        	if (input.length < 3) {
+        		alert('Please provide minimum 3 values separated by comma.')
+        	}
+        	var x = parseFloat(input[0]);
+        	var y = parseFloat(input[1]);
+        	var z = parseFloat(input[2]);
+        	if (isNaN(x) || isNaN(y) || isNaN(z)) {
+        		alert("Please provide  valid numeric values.");
+				return;
+        	}
+        	var res = Math.min(x, y, z);
+        	document.getElementsByTagName('h1')[0].innerText="Math.min(x, y, z): Return the minimum value among x,y and z.";
+        }
+        // ---------------
+        if (s == 'max') {
+        	input = v.split(",");
+        	if (input.length < 3) {
+        		alert('Please provide minimum 3 values separated by comma.');
+        	}
+        	var x = parseFloat(input[0]);
+        	var x = parseFloat(input[1]);
+        	var x = parseFloat(input[2]);
+        	if (isNaN(x) || isNaN(y) || isNaN(z)) {
+        		alert("Please provide valid numeric values.");
+        		return;
+        	}
+        	var res = Math.max(x, y, z);
+        	document.getElementsByTagName('h1')[0].innerText="Math.max(x, y, z): Return the maximum value among x,y and z."
+        }
+        // ---------------
+        if (s == 'random') {
+        	var x = Math.random() * v;
+        	var res = Math.floor(x);
+        	document.getElementsByTagName('h1')[0].innerText='Math.random(): Returns random decimal value in between 0 and 1';
+        }
+		document.getElementById('res').value=res;
+	}
+</script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+   <!-- 
+      ---------Method List of Time and Date---------
+      .Date(); Get the current date and time details according to browser.
+      .getFullYear(); Get the year as a four digit number (yyyy).
+      .getMonth(); Get the month as a number (0-11).
+      .getDate(); Get the day as a number.(1-31).
+      .getHours(); Get the hour as a number (0-23).
+      .getMinutes(); Get the minutes as a number (0-59).
+      .getSeconds(); Get the Seconds as a number (0-59).
+      .getMiliSeconds; Get the Miliseconds (0.999).
+      .getDay(); Get the number of the day as (0-6).
+      .getTime(); Get the time (miliseconds since january 1,1970).
+    -->
+      
+      <h1 id="res"></h1>
+      <br />
+      <hr />
+      <br />
+      <div>
+         <button onclick="calldate()">Date</button>
+         <button onclick="callyear()">Year</button>
+         <button onclick="callmonth()">Month</button>
+         <button onclick="callmday()">M-Day</button>
+         <button onclick="callhours()">Hours</button>
+         <button onclick="callminutes()">Minutes</button>
+         <button onclick="callseconds()">Second</button>
+         <button onclick="callmseconds()">Mili.Sec</button>
+         <button onclick="callwday()">W-Day</button>
+         <button onclick="calltime()">Time</button>
+      </div>
+</body>
+<script type="text/javascript">
+    var s = new Date();
+
+    function calldate() {
+      document.getElementById('res').innerText=s+ "    <==Date(); Get the current date and time details according to browser.";
+    }
+    function callyear() {      
+      document.getElementById('res').innerText=s.getFullYear()+ "    <==getFullYear(); Get the year as a four digit number (yyyy).";
+    }
+    function callmonth() {
+      // javascripy povide us only number of month its our own function.
+      var mon = ['January','Februray','March','April','May','June','July','Auggust','September','October','November','December'];
+      document.getElementById('res').innerText=mon[s.getMonth()]+ "    <==getMonth(); Get the month as a number (0-11).";
+    }
+    function callmday() {
+      document.getElementById('res').innerText=s.getDate()+ "   <==getDate(); Get the day as a number.(1-31).";
+    }
+    function callhours() {
+      document.getElementById('res').innerText=s.getHours()+"     <==getHours(); Get the hour as a number (0-23).";
+    }
+    function callminutes() {
+      document.getElementById('res').innerText=s.getMinutes()+ "   <==getMinutes(); Get the minutes as a number (0-59).";
+    }
+    function callseconds() {
+      document.getElementById('res').innerText=s.getSeconds()+ "   <==getSeconds(); Get the Seconds as a number (0-59)";
+    }
+    function callmseconds() {
+      document.getElementById('res').innerText=s.getMilliseconds()+ "  <==getMilliseconds(); Get the Milliseconds (0.999).";
+    }
+    function callwday() {
+      var dy = ['Sunday','Monday','Tuesday','Wednessday','Thursday','Friday','Satureday'];
+      document.getElementById('res').innerText=dy[s.getDay()]+ "   <==getDay(); Get the number of the day as (0-6).";
+    }
+    function calltime() {
+      document.getElementById('res').innerText=s.getTime()+"  <==getTime(); Get the time (miliseconds since january 1,1970).";
+    }
+</script>
+</html>

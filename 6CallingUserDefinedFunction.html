@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.meet{
+			width: 420px;
+			height: 600px;
+			border: 2px solid green;
+			background: rgba(0, 0, 0, 0.8);
+			position: relative;
+			color: whitesmoke;
+			margin: auto;
+		}
+		.input{
+			width: 180px;
+			height: 30px;
+			background: rgba(255, 255, 255, 0.2);
+			position: absolute;
+			outline: none;
+			border: 1px solid lightgreen;
+			top:68%;
+			left:20%;
+			color:white;
+			pading:2px;
+			font-size: 1rem;
+		}
+		.btn{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			box-shadow: 0px 0px 10px 5px rgba(255, 0, 0, 0.4);
+			outline: none;
+			border: none;
+			position: absolute;
+			top:66%;
+			right:22%;
+			transition: 0.0001s;
+		}
+		.btn:hover {
+           transform: scale(0.9);
+		}
+		.greet{
+			width: 260px;
+			height: 170px;
+			border: 1px solid lightgreen;
+			background: rgba(255, 255, 255, 0.2);
+			position: absolute;
+			top: 18%;
+			left: 15%;
+			color: yellow;
+			font-size: 2rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="meet">
+		<input type="text" name="name" id="name" class="input" placeholder="Name..." autofocus />
+		<button onclick="greet()" class="btn">Greet</button>
+		<div class="greet"></div>
+	</div>
+</body>
+<script type="text/javascript">
+	function greet() {
+	var name = document.getElementById('name').value;
+	var string = "Hello " + name ;
+	
+	document.getElementsByClassName('greet')[0].innerHTML=string;
+	}
+</script>
+</html>

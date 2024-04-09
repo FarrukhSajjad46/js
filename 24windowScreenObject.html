@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<!-- 
+		---------Window Screen Objects------------
+		 ----------------Syntax------------------
+  availWidth: Returns width of the screen excluding taskbar. :: screen.availWidth
+  availHeight: Returns height of the screen excluding taskbar. :: screen.availHeight
+  width: Returns total width of window screen. :: screen.width
+  height: Returns total width of window screen. :: screen.height
+  colorDepth: Returns the bit depth of the color palette for displaying images.
+  :: screen.colorDepth
+  pixelDepth: Returns the color resolution (in bits per pixel) of the screen.
+  :: screen.colorDepth
+	 -->
+
+             <button onclick="tst()">Screen Test</button>
+</body>
+<script type="text/javascript">
+	function tst() {
+		var a = screen.width;
+		var b = screen.height;
+		var c = screen.colorDepth;
+		var x = "Width: "+ a + "px " +"Height: "+ b + "px " +"Color Depth: "+ c + "px ";
+		alert(x);
+	}
+</script>
+</html>
